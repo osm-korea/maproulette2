@@ -1,5 +1,7 @@
 general.titleA=맵
 general.titleB=룰렛
+general.api=API 문서
+general.email=이메일
 
 common.basemap.osm=OSM
 common.basemap.ocm=오픈사이클맵
@@ -7,15 +9,21 @@ common.basemap.bing=빙
 
 headers.title=맵룰렛
 headers.administration=맵룰렛 관리
-headers.metrics=맵룰렛 매트릭
+headers.metrics=맵룰렛 통계
 headers.users=맵룰렛 사용자
+headers.users.activity=사용자 {0}의 맵룰렛 활동
+headers.users.activity.title=맵룰렛 사용자 활동
 headers.profile=맵룰렛 프로필
 headers.error=맵룰렛 오류
+headers.directory=맵룰렛 도전
+
+directory.title=도전
+directory.none=발견된 도전 없음
 
 sidebar.avatarURL=사용자 이미지
 sidebar.online=온라인
 sidebar.search.placeholder=검색...
-sidebar.search.mapincluded=Use Map Bounds
+sidebar.search.mapincluded=지도 경계 사용
 sidebar.search.results=검색 결과
 sidebar.administration=관리
 sidebar.survey.header=조사
@@ -34,7 +42,7 @@ rightsidebar.challenge.progress=도전 진행도
 rightsidebar.challenge.current=현재 도전
 rightsidebar.tasks.total=모든 작업
 rightsidebar.tasks.available=작업할 수 있는 작업
-rightsidebar.tasks.fixed=완료된 작업
+rightsidebar.tasks.fixed=고쳐진 작업
 rightsidebar.tasks.skipped=건너뛴 작업
 rightsidebar.tasks.toohard=너무 어려운 작업
 rightsidebar.tasks.falsepositive=잘못 작업된 작업
@@ -53,11 +61,19 @@ rightsidebar.general.info=이 일반 설정 옵션에 대한 정보
 footer.getintouch=연락하기
 
 user.signin=로그인
+user.signin.osm=OSM으로 로그인
 user.osmmember=OSM 회원 가입
 user.apikey.view=API 키 보기
 user.apikey.new=API 키 재생성
+user.apikey.set=API 키 수동으로 설정하기
+user.apikey.update=업데이트
 user.profile=프로필
 user.signout=로그아웃
+user.rememberme=로그인 기억하기
+user.osm.username=OSM 사용자 이름
+user.osm.username.placeholder=사용자 이름...
+user.osm.apikey=API 키
+user.osm.apikey.placeholder=API 키...
 
 user.profile.header=사용자 프로필
 user.profile.aboutme=자기소개
@@ -159,7 +175,8 @@ task.column.priority.high=높음
 task.column.priority.medium=중간
 task.column.priority.low=낮음
 task.column.name=이름
-task.column.instruction=안내 사항
+task.column.instruction=지시
+task.column.instruction.none=작업에 대한 지시 사항이 설정되어 있지 않습니다.
 task.column.location=위치
 task.column.status=상태
 task.column.actions=행동
@@ -180,9 +197,9 @@ tasks.form.field.parent=부모 ID
 tasks.form.field.name=이름
 tasks.form.field.name.placeholder=작업 이름
 tasks.form.field.name.help=이름을 입력해 주세요 (필수)
-tasks.form.field.instruction=안내 사항
-tasks.form.field.instruction.placeholder=작업 안내 사항
-tasks.form.field.instruction.help=작업에 필요한 안내 사항을 입력해 주세요 (필수)
+tasks.form.field.instruction=지시
+tasks.form.field.instruction.placeholder=작업 지시 사항
+tasks.form.field.instruction.help=작업에 필요한 지시 사항을 입력해 주세요 (필수)
 tasks.form.field.location=위치
 tasks.form.field.location.placeholder=작업 위치
 tasks.form.field.location.help=작업 위치를 입력해 주세요 (선택)
@@ -241,6 +258,7 @@ challenge.visibility=이 도전이 속해있는 프로젝트가 공개되어있�
 challenge.column.visible=공개
 challenge.column.id=ID
 challenge.column.name=이름
+challenge.column.lastUpdated=마지막으로 업데이트됨
 challenge.column.metrics=모든 작업/고침/고칠 부분 없음
 challenge.column.type=데이터 형식
 challenge.column.status=상태
@@ -261,6 +279,7 @@ challenge.column.actions.metrics=작업 통계 보기
 challenge.column.actions.view=지도에서 보기
 challenge.column.actions.rebuild=작업 다시 생성
 challenge.column.actions.start=시작
+challenge.column.actions.resetinstructions=지시 사항 초기화
 challenge.notfound=표시할 도전이 없습니다
 challenge.owner=소유자:
 
@@ -312,6 +331,9 @@ challenge.wizard.general.blurb.help=도전을 홍보하기 위한 광고글을 �
 challenge.wizard.general.instruction=지시
 challenge.wizard.general.instruction.placeholder=도전 지시
 challenge.wizard.general.instruction.help=이 도전에서 무엇을 해야하는지 적어주세요. (필수)
+challenge.wizard.general.checkincomment=체크인 의견
+challenge.wizard.general.checkincomment.placeholder=도전 체크인 의견
+challenge.wizard.general.checkincomment.help=선택한 에디터에 표시될 체크인 의견을 선택해 주세요.
 challenge.wizard.general.difficulty=난이도
 challenge.wizard.general.difficulty.help=도전의 난이도를 선택해 주세요.
 challenge.wizard.general.tags=태그
@@ -341,6 +363,8 @@ challenge.wizard.extra.select=지정할 배경지도 선택
 challenge.wizard.extra.basemap.custom=다른 배경지도...
 challenge.wizard.extra.basemap.custom.placeholer=다른 배경지도 URL
 challenge.wizard.extra.basemap.custom.help=위에서 다른 배경지도를 선택한 경우 이곳에 배경지도의 주소를 입력해주세요. 예) http://'{s}'.tile.openstreetmap.org/'{z}'/'{x}'/'{y}'.png
+challenge.wizard.extra.updateTasks=작업 업데이트
+challenge.wizard.extra.updateTasks.help=이 옵션을 사용하면 1주일 이상 처리되지 않은 오래된 열린 작업들 (생성됨 또는 넘어감 상태에 있는 것)이 자동으로 삭제됩니다.
 
 challenge.wizard.schedule.description=이곳에서 언제 작업을 업데이트할 지 설정할 수 있습니다. 이 기능은 Overpass 쿼리나 인터넷의 GeoJSON 파일을 사용하도록 설정한 경우에만 활성화됩니다.
 
@@ -349,11 +373,12 @@ challenge.difficulty.1=쉬움
 challenge.difficulty.2=보통
 challenge.difficulty.3=어려움
 
-mapping.js.control.edit.information=이 작업를 어디에서 고치실 거에요?
+mapping.js.control.comment=선택 의견
+mapping.js.control.edit.information=이 작업을 어디에서 고치실 거에요?
 mapping.js.control.edit.id=iD에서 고치기
 mapping.js.control.edit.josm=JOSM에서 고치기
 mapping.js.control.edit.josm.layer=새 JOSM 레이어에서 고치기
-mapping.js.control.edit.nevermind=안고칠테니 신경쓰지마
+mapping.js.control.edit.nevermind=안 고칠테니 신경 쓰지 마
 mapping.js.control.edit.cancel=취소
 mapping.js.control.results.title=이 영역이 선택한 OSM 편집기에서 열립니다. 작업를 둘러보고 맵룰렛으로 돌아오세요.<br/><i>고칠 때마다 저장(iD)하거나 업로드(JOSM)해야 함을 잊지마세요.</i>
 mapping.js.control.results.fixed=고쳤어요!
@@ -388,16 +413,27 @@ mapping.js.location.start=우리가
 mapping.js.location.between=있는 곳:
 mapping.js.location.elsebetween=있는듯한 곳:
 mapping.js.location.the=the
-mapping.js.custom.attribution=다른 배경지도 - No Attribution
+mapping.js.custom.attribution=다른 배경지도 - 저작자 표시 없음
 mapping.js.custom.error=다른 배경지도 {0}(을)를 읽어오는 중에 문제가 발생했습니다. OSM 배경지도로 되돌립니다.
 mapping.js.challenge.saved=도전 저장!
 mapping.js.instruction.challenge=도전
 mapping.js.instruction.status=상태
 mapping.js.instruction.lastModifiedUser=마지막에 작업한 사용자
+mapping.js.instruction.created=생성됨
+mapping.js.instruction.modfied=수정됨
+mapping.js.challenge.lastUpdated=마지막 업데이트
+mapping.js.task.comment=의견
+mapping.js.task.comment.loading.error=의견을 불러오지 못했습니다.
+mapping.js.task.comment.none=의견 없음
+mapping.js.cheatkeys.title=키보드 단축키
+mapping.js.cheatkeys.show=키보드 단축키 보기
 
 main.js.deletion=삭제합니다
 main.js.api.generation=[{0}] 사용자의 API키를 생성합니다
 main.js.api.rebuilding=[{0}] 도전의 작업를 다시 생성합니다
+main.js.api.resetinginstructions=[{0}] 도전의 지시 사항을 모두 재설정합니다.
+main.js.api.resetinginstructions.success=[{0}] 도전의 지시 사항을 성공적으로 모두 재설정했습니다.
+
 
 metrics.js.error=Activity Chart를 그리기 위한 데이터를 읽어오지 못했습니다.
 metrics.js.status.available=Available
@@ -408,6 +444,7 @@ metrics.js.status.alreadyfixed=이미 고쳐짐
 metrics.js.status.toohard=고치기 어려움
 
 users.administration.title=관리
+users.administration.activity.title=사용자 활동
 users.title=사용자 (OSM)
 users.column.id=ID
 users.column.osmid=OSM ID
@@ -417,6 +454,7 @@ users.column.apikey=API 키
 users.column.actions=동작
 users.column.actions.options=명령
 users.column.actions.options.toggle=드랍다운 메뉴 열기
+users.column.actions.activity=활동 보기
 users.column.actions.view=보기
 users.column.actions.regenerate=키 재생성
 users.column.actions.add=프로젝트에 등록
@@ -429,6 +467,20 @@ users.addto.field.projects.help=사용자를 등록할 프로젝트를 선택하
 users.addto.action.add=사용자 등록
 users.addto.action.cancel=취소
 users.addto.success=사용자를 프로젝트에 등록했습니다
+users.profile.activity.fixed={0}개 작업을 고쳤습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
+users.profile.activity.falsepositive={0}개 작업을 오탐으로 지정했습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
+users.profile.activity.skipped={0}개 작업을 건너뛰었습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
+users.profile.activity.toohard={0}개 작업을 너무 어렵다고 지정했습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
+users.profile.activity.alreadyfixed={0}개 작업을 이미 고쳤다고 지정했습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
+users.profile.activity.summary.failure=사용자 활동 요약 정보를 불러오지 못했습니다
+users.profile.activity.failure=사용자 활동 정보를 불러오지 못했습니다
+users.profile.activity.see=자세한 활동 보기
+users.profile.activity.none=사용자 활동 없음
+users.profile.activity.table.time=시간
+users.profile.activity.table.challenge=도전 ID
+users.profile.activity.table.challengename=도전 이름
+users.profile.activity.table.task=작업 ID
+users.profile.activity.table.changeset=바뀜집합
 
 geojson.title=GeoJSON 뷰어
 geojson.description=GeoJSON을 알고싶으면 <a href="http://geojson.org/geojson-spec.html" target="_blank">규격을 읽어</a>주세요.
