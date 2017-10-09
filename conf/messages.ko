@@ -120,6 +120,7 @@ metrics.challenge.average=평균 진척도
 metrics.challenge.fixed=고쳐짐
 metrics.challenge.avgfalsepositiverate=평균 오탐지율
 metrics.challenge.falsepositives=오탐지
+metrics.challenge.answered=응답됨
 metrics.challenge.users=사용자
 metrics.challenge.activity=도전 활동
 metrics.challenge.completion=도전 완료
@@ -317,6 +318,7 @@ challenge.wizard.general.featured=Featured
 challenge.wizard.general.id=ID
 challenge.wizard.general.parent=부모 프로젝트 ID
 challenge.wizard.general.type=데이터 형식
+challenge.wizard.general.type.help=도전은 맵룰렛의 일반적인 형태이며, 조사는 간단한 조사 결과를 지원합니다.
 challenge.wizard.general.visible=공개
 challenge.wizard.general.visible.help=도전을 공개할지 말지 결정합니다.
 challenge.wizard.general.name=이름
@@ -372,6 +374,9 @@ challenge.difficulty.title=난이도:
 challenge.difficulty.1=쉬움
 challenge.difficulty.2=보통
 challenge.difficulty.3=어려움
+
+challenge.survey.answer.valid=유효
+challenge.survey.answer.invalid=무효
 
 mapping.js.control.comment=선택 의견
 mapping.js.control.edit.information=이 작업을 어디에서 고치실 거에요?
@@ -472,6 +477,7 @@ users.profile.activity.falsepositive={0}개 작업을 오탐으로 지정했습�
 users.profile.activity.skipped={0}개 작업을 건너뛰었습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
 users.profile.activity.toohard={0}개 작업을 너무 어렵다고 지정했습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
 users.profile.activity.alreadyfixed={0}개 작업을 이미 고쳤다고 지정했습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
+users.profile.activity.answered={0}개 작업에 응답했습니다 <span class="time"><i class="fa fa-clock-o"></i> {1}</span>
 users.profile.activity.summary.failure=사용자 활동 요약 정보를 불러오지 못했습니다
 users.profile.activity.failure=사용자 활동 정보를 불러오지 못했습니다
 users.profile.activity.see=자세한 활동 보기
